@@ -1,0 +1,42 @@
+<html>
+   <head>
+      <title>File Upload</title>
+      <link rel="stylesheet" href="/static/style1.css" />
+   </head>
+    
+   <body>
+   <center><img src="static/logo1.ico" alt="Girl in a jacket" ></center>
+    <center><h1 class="f1">Plagarism detector for Assignments</h1></center>
+    <form method="POST" action="" enctype="multipart/form-data">
+     
+      <section class="rec1">
+
+      <div class="container">
+        
+         <input type = "file" class="upload-box" name="file" />
+         <section class="rec">
+         <input type = "submit" class="button-29" />
+         </section>   
+      </div>
+      </section> 
+    </form>
+    <center>
+        <h1 class="out">{{asq}}</h1>
+    <table class="table">
+
+      <tr class="table__header">
+        {% for header in headings %}
+        <th class="table__cell">{{ header }}</th>
+        {% endfor %}
+      </tr>
+      {% for row in data %}
+      <tr class="table__row">
+        {% for cell in row  %}
+        <td class="table_cell">{{ cell }}</td>
+        {% endfor %}
+      </tr>
+      {% endfor %}
+    </table>
+        </center>
+   </body>
+</html>
